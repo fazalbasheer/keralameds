@@ -3,78 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keralameds - Medical Tourism</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Keralameds - Premier Medical Tourism</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>Keralameds</h1>
-        </div>
         <nav>
             <ul>
-                <li><a href="#about">About Us</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="hero">
-            <h2>Your Health, Our Priority</h2>
-            <p>Discover world-class medical facilities in Kerala.</p>
-            <a href="#services" class="cta-button">Explore Services</a>
-        </section>
+    <section id="home" class="parallax">
+        <div class="content">
+            <h1>Keralameds</h1>
+            <p>Text</p>
+        </div>
+    </section>
 
-        <section id="about">
+    <section id="about" class="parallax">
+        <div class="content">
             <h2>About Us</h2>
-            <p>Keralameds is dedicated to providing exceptional medical tourism services, connecting patients with top healthcare providers in Kerala.</p>
-            <img src="images/about.jpg" alt="About Keralameds" class="responsive-image">
-        </section>
+            <p>Text</p>
+        </div>
+    </section>
 
-        <section id="services">
-            <h2>Our Services</h2>
-            <div class="service-list">
-                <div class="service-item">
-                    <h3>Hospital Coordination</h3>
-                    <p>We coordinate with leading hospitals for your treatment.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Travel Arrangements</h3>
-                    <p>We take care of your travel and accommodation needs.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Post-Operative Care</h3>
-                    <p>Comprehensive care after your procedure.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Wellness Packages</h3>
-                    <p>Explore our wellness and preventive health packages.</p>
-                </div>
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-item">
+                <img src="images/image3.jpg" alt="Service 1">
+                <h3>Headline</h3>
+                <p>Text</p>
             </div>
-        </section>
+            <div class="service-item">
+                <img src="images/image4.jpg" alt="Service 2">
+                <h3>Headline</h3>
+                <p>Text</p>
+            </div>
+            <div class="service-item">
+                <img src="images/image5.jpg" alt="Service 3">
+                <h3>Headline</h3>
+                <p>Text</p>
+            </div>
+            <div class="service-item">
+                <img src="images/image6.jpg" alt="Service 4">
+                <h3>Headline</h3>
+                <p>Text</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="contact">
+    <section id="contact" class="parallax">
+        <div class="content">
             <h2>Contact Us</h2>
-            <form action="#" method="post">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br>
-
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br>
-
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br>
-
-                <input type="submit" value="Submit" class="submit-button">
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
             </form>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2024 Keralameds. All rights reserved.</p>
     </footer>
-
 </body>
 </html>

@@ -71,12 +71,73 @@ body {
     transform: translateY(-2px);
 }
 
+/* Banner Section Styles */
+.banner {
+    background-image: url('images/health1.jpg'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay */
+    z-index: 1;
+}
+
+.banner .container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.banner h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.banner .cta-button {
+    background-color: #ff6347;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.banner .cta-button:hover {
+    background-color: #ff4500;
+    transform: scale(1.05);
+}
+
 /* Hero Section Styles */
 .hero {
     background-image: url('images/kerala-backwaters.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Parallax effect */
+    background-attachment: fixed;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -107,11 +168,6 @@ body {
     animation: fadeIn 1s ease-out;
 }
 
-.hero .container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 20px;
@@ -124,8 +180,7 @@ body {
     animation: slideInUp 1s ease-out;
 }
 
-.cta-button {
-    display: inline-block;
+.hero .cta-button {
     background-color: #4CAF50;
     color: #fff;
     padding: 12px 30px;
@@ -136,7 +191,7 @@ body {
     animation: fadeIn 1s ease-out 0.5s backwards;
 }
 
-.cta-button:hover {
+.hero .cta-button:hover {
     background-color: #45a049;
     transform: scale(1.05);
 }
@@ -203,78 +258,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Services Section Styles */
-.services-section {
-    padding: 80px 0;
-    background-color: #fff;
-    position: relative;
-}
-
-.services-section h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    color: #333;
-    position: relative;
-}
-
-.services-section h2::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #4CAF50;
-    margin: 20px auto 0;
-    animation: expandWidth 0.5s ease-out;
-}
-
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.service-item {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    animation: fadeInUp 0.5s ease-out;
-}
-
-.service-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.service-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.service-item:hover .service-image {
-    transform: scale(1.05);
-}
-
-.service-item h3 {
-    padding: 20px;
-    font-size: 1.2rem;
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-.service-item:hover h3 {
-    color: #4CAF50;
-}
-
-.service-item p {
-    padding: 0 20px 20px;
-    color: #666;
-}
-
 /* Contact Section Styles */
 .contact-section {
     padding: 80px 0;
@@ -309,75 +292,6 @@ body {
     animation: expandWidth 0.5s ease-out;
 }
 
-.contact-info {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 40px;
-}
-
-.contact-item {
-    text-align: center;
-    transition: transform 0.3s ease;
-    animation: fadeInUp 0.5s ease-out;
-}
-
-.contact-item:hover {
-    transform: translateY(-5px);
-}
-
-.contact-item i {
-    font-size: 2rem;
-    color: #4CAF50;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
-}
-
-.contact-item:hover i {
-    transform: scale(1.1);
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    animation: fadeIn 1s ease-out;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #4CAF50;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
-}
-
-.contact-form textarea {
-    height: 150px;
-}
-
-.submit-button {
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    padding: 12px 30px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.submit-button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
-
 /* Footer Styles */
 .site-footer {
     background-color: #333;
@@ -395,179 +309,3 @@ body {
     height: 100px;
     background: linear-gradient(to top right, #333 49%, transparent 50%);
 }
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.footer-section h3 {
-    margin-bottom: 15px;
-    position: relative;
-}
-
-.footer-section h3::after {
-    content: '';
-    display: block;
-    width: 30px;
-    height: 2px;
-    background-color: #4CAF50;
-    margin-top: 10px;
-    animation: expandWidth 0.5s ease-out;
-}
-
-.footer-section ul {
-    list-style: none;
-}
-
-.footer-section ul li {
-    margin-bottom: 10px;
-}
-
-.footer-section ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
-}
-
-.footer-section ul li a:hover {
-    color: #4CAF50;
-    transform: translateX(5px);
-}
-
-.social-icons a {
-    color: #fff;
-    font-size: 1.5rem;
-    margin-right: 15px;
-    transition: color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
-}
-
-.social-icons a:hover {
-    color: #4CAF50;
-    transform: scale(1.2);
-}
-
-.copyright {
-    text-align: center;
-    margin-top: 20px;
-    opacity: 0.8;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideInDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideInUp {
-    from {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes expandWidth {
-    from { width: 0; }
-    to { width: 50px; }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .about-features,
-    .contact-info {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .feature,
-    .contact-item {
-        margin-bottom: 30px;
-    }
-
-    .footer-content {
-        flex-direction: column;
-    }
-
-    .footer-section {
-        margin-bottom: 30px;
-    }
-}
-/* styles.css */
-
-/* Styling for the banner */
-.banner {
-    background-image: url('images/health1.jpg'); /* Path to your background image */
-    background-size: cover; /* Ensures the image covers the entire banner */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    height: 500px; /* Adjust the height to fit the content */
-    display: flex; /* Use flexbox to center content */
-    justify-content: center; /* Center the container horizontally */
-    align-items: center; /* Center the container vertically */
-    text-align: center; /* Center the text inside the container */
-}
-
-/* Styling for the container inside the banner */
-.container h1 {
-    color: white; /* White text for contrast */
-    font-size: 36px; /* Adjust the heading size */
-    margin-bottom: 20px;
-}
-
-.container p {
-    color: white; /* White text for the paragraph */
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.cta-button {
-    background-color: #ff6347; /* Button background color */
-    color: white; /* Button text color */
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #ff4500; /* Darker color on hover */
-}
-

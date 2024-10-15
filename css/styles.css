@@ -529,3 +529,45 @@ body {
         margin-bottom: 30px;
     }
 }
+/* styles.css */
+
+/* Styling for the banner */
+.banner {
+    background-image: url('images/health1.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensures the image covers the entire banner */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 500px; /* Adjust the height to fit the content */
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Center the container vertically */
+    text-align: center; /* Center the text inside the container */
+}
+
+/* Styling for the container inside the banner */
+.container h1 {
+    color: white; /* White text for contrast */
+    font-size: 36px; /* Adjust the heading size */
+    margin-bottom: 20px;
+}
+
+.container p {
+    color: white; /* White text for the paragraph */
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #ff6347; /* Button background color */
+    color: white; /* Button text color */
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff4500; /* Darker color on hover */
+}
+
